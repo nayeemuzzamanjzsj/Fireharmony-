@@ -1,0 +1,6 @@
+{
+  "name": "FireHarmony",
+  "description": "Harmonizes MODIS and VIIRS active-fire satellite detections for Bangladesh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

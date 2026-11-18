@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/((?!api/|geo/|assets/).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "api/**/*.ts": {
+      "maxDuration": 300,
+      "includeFiles": "{data/boundaries/**,public/geo/**}"
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/ingest/tick",
+      "schedule": "0 2 * * *"
+    }
+  ]
+}
